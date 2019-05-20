@@ -144,6 +144,7 @@
 		{
 		width: 70%;
 		height: auto;
+		position: relative;
 		margin: 0 10%;
 		padding: 5%;
 		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
@@ -185,5 +186,10 @@
 		color: #fcfcfc;
 		text-decoration: none;
 		padding: 25px;
+		}
+	#thumbnail
+		{
+		width: 1000px;
+		height: 100px;
 		}
 }
