@@ -12,18 +12,20 @@
 
 /* ********************************************** */
 /* 全体 */
-
-	html
+	html, body
 		{
+		height: 100%;
 		margin: 0;
 		padding: 0;
+		}
+	html
+		{
 		background-color: #323232;
+		font-size: 100%;
 		}
 	body
 		{
 		text-align: left;
-		margin: 0;
-		padding: 0;
 		background-color: #d7d2c3;
 		color: #323232;
 		font-family: "UD デジタル 教科書体 N-R", "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
@@ -39,15 +41,17 @@
 		}
 	h1	
 		{
-		
+		font-size: 2rem;		
 		}
 	h2
 		{
 		margin-left: 0.8rem;
+		font-size: 1.6rem;
 		}
 	h3
 		{
 		color: #b93a21;
+		font-size: 1.2rem;
 		}
 	p
 		{
@@ -100,14 +104,33 @@
 /* ********************************************** */
 /* レイアウト */
 		
-	#HEADER
+	#HEADER, #FOOTER
 		{
 		width: 100%;
-		height: 150px;
-		padding-bottom: 1rem;
+		height: 10%;
+		margin: 0;
 		position: relative;
 		color: #fcfcfc;
-		background-color: #323232;
+		background-color: #323232;		
+		}
+		
+	#HEADER
+		{
+		padding-bottom: 5%;
+		}
+		
+	.text
+		{
+		width: 70%;
+		padding: 5%;
+		position: relative;
+		margin: 0 10%;
+		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+		}
+
+	#FOOTER
+		{
+		padding-top: 5%;
 		}
 
 	.HDTITLE
@@ -138,24 +161,6 @@
 		top: 50%;
 		transform: translateY(+150%);
 		right: 0;
-		}
-
-	.text
-		{
-		width: 70%;
-		height: auto;
-		position: relative;
-		margin: 0 10%;
-		padding: 5%;
-		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
-		}
-
-	#FOOTER
-		{
-		height: 150px;
-		padding-top: 2rem;
-		background-color: #323232;
-		text-align: center;
 		}
 		
 	#MENU
@@ -191,5 +196,10 @@
 		{
 		width: 1000px;
 		height: 100px;
+		}
+	
+	.bold
+		{
+		font-weight: bold;
 		}
 }
