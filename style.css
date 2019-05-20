@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@media screen{
+
+/* ********************************************** */
+ /* カスタマイズ項目 */
+ 
+	/* 横幅 */
+
+	/* ヘッダー画像 */
+
+	/* 見出し画像 */
+
+/* ********************************************** */
+/* 全体 */
+
+	html
+		{
+		margin: 0;
+		padding: 0;
+		background-color: #323232;
+		}
+	body
+		{
+		text-align: left;
+		margin: 0;
+		padding: 0;
+		background-color: #d7d2c3;
+		color: #323232;
+		font-family: "UD デジタル 教科書体 N-R", "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
+		}
+
+/* ********************************************** */
+/* 見出し */
+
+	h1, h2, h3, h4, h5, h6
+		{
+		margin: 1rem 0;
+		font-weight: normal;
+		}
+	h1	
+		{
+		
+		}
+	h2
+		{
+		margin-left: 0.8rem;
+		}
+	h3
+		{
+		color: #b93a21;
+		}
+	p
+		{
+		font-size: 0.8rem;
+		}
+
+/* ********************************************** */
+/* ブロック要素 */
+
+	/* リスト */
+
+	/* アドレス */
+
+	/* 引用 */
+
+	/* 整形済みテキスト */
+
+	/* 罫線 */
+
+/* ********************************************** */
+/* インライン要素 */
+
+	/* アンカー */	
+	a
+		{
+		}
+		a:link
+			{
+			text-decoration: none;
+			color: #397d99;
+			}
+		a:visited
+			{
+			color: #397d99;
+			}
+		a:hover,
+		a:active,
+		a:focus
+			{
+			text-decoration: underline;
+			color: #01608c;
+			}
+
+	/* 改行 */
+	br
+		{
+		letter-spacing: normal;
+		}
+
+/* ********************************************** */
+/* レイアウト */
+		
+	#HEADER
+		{
+		width: 100%;
+		height: 150px;
+		padding-bottom: 1rem;
+		position: relative;
+		color: #fcfcfc;
+		background-color: #323232;
+		}
+
+	.HDTITLE
+		{
+		width: 200px;
+		height: 100px;
+		position: absolute;
+		left: 12%;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: #323232;
+		}
+	
+	.HDTITLE h1
+		{
+		font-size: 1.8rem;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		}
+	.HDTITLE p
+		{
+		font-size: 0.6rem;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(+150%);
+		right: 0;
+		}
+
+	.text
+		{
+		width: 70%;
+		height: auto;
+		margin: 0 10%;
+		padding: 5%;
+		background: #f4f1eb url("img/lav.png") no-repeat right bottom;
+		}
+
+	#FOOTER
+		{
+		height: 150px;
+		padding-top: 2rem;
+		background-color: #323232;
+		text-align: center;
+		}
+		
+	#MENU
+		{
+		position: absolute;
+		right: 12%;
+		bottom: 10%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+		}
+		
+	#MENU li
+		{
+		width: 120px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		float: left;
+		padding 0;
+		margin: 0 1px;
+		background-color: #828278;
+		}
+		
+	#MENU li a
+		{
+		color: #fcfcfc;
+		text-decoration: none;
+		padding: 25px;
+		}
+}
