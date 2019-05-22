@@ -17,16 +17,15 @@
 		height: 100%;
 		margin: 0;
 		padding: 0;
+		background-color: #d7d2c3;
 		}
 	html
 		{
-		background-color: #323232;
 		font-size: 100%;
 		}
 	body
 		{
 		text-align: left;
-		background-color: #d7d2c3;
 		color: #323232;
 		font-family: "UD デジタル 教科書体 N-R", "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
 		}
@@ -36,7 +35,8 @@
 
 	h1, h2, h3, h4, h5, h6
 		{
-		margin: 1rem 0;
+		margin: 1em 0;
+		padding: 0;
 		font-weight: normal;
 		}
 	h1	
@@ -78,18 +78,19 @@
 	a
 		{
 		}
+		
 		a:link
 			{
 			text-decoration: none;
 			color: #397d99;
 			}
+			
 		a:visited
 			{
 			color: #397d99;
 			}
-		a:hover,
-		a:active,
-		a:focus
+			
+		a:hover, a:active, a:focus
 			{
 			text-decoration: underline;
 			color: #01608c;
@@ -104,102 +105,141 @@
 /* ********************************************** */
 /* レイアウト */
 		
-	#HEADER, #FOOTER
+	#HEADER, .partition, #FOOTER
 		{
-		width: 100%;
-		height: 10%;
+		width: auto;
+		height: 5%;
 		margin: 0;
 		position: relative;
 		color: #fcfcfc;
-		background-color: #323232;		
+		background-color: #424242;		
 		}
-		
+
 	#HEADER
 		{
+		position: relative;
 		padding-bottom: 5%;
 		}
+	
+	#MENU
+		{
+		width: auto;
+		height: auto;
+		position: absolute;
+		right: 10%;
+		top: 50%;
+		transform: translateY(-50%);		
+		}
+	
+		#MENU label
+			{
+			position: relative;
+			width: auto;
+			height: 2.4rem;
+			line-height: 2.4rem;
+			text-align: center;
+			margin-right: 2px;
+			padding: 0 1rem;
+			background-color: #505050;
+			color: #919187;
+			display: block;
+			float: left;
+			text-align: center;			
+			transition-property: color, background-color;
+			transition-duration: 0.2s;
+			transition-timing-function: ease-in-out;
+			}
+
+		#MENU label:hover
+			{
+			background-color: #919187;
+			color: #fff;
+			}
 		
 	.text
 		{
-		width: 70%;
-		padding: 5%;
-		position: relative;
-		margin: 0 10%;
+		width: 50%;
+		height: 80%;
+		padding: 2%5% 8% 5%;
+		margin: 0 auto;
 		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
 		}
-
+		
 	#FOOTER
 		{
-		padding-top: 5%;
+		padding: 5%;
 		}
 
 	.HDTITLE
 		{
-		width: 200px;
-		height: 100px;
+		width: 10rem;
+		height: auto;
 		position: absolute;
-		left: 12%;
+		left: 10rem;
 		top: 50%;
 		transform: translateY(-50%);
-		background-color: #323232;
+		background-color: white;
 		}
 	
-	.HDTITLE h1
-		{
-		font-size: 1.8rem;
-		margin: 0;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: 0;
-		}
-	.HDTITLE p
-		{
-		font-size: 0.6rem;
-		margin: 0;
-		position: absolute;
-		top: 50%;
-		transform: translateY(+150%);
-		right: 0;
-		}
+		.HDTITLE h1
+			{
+			font-size: 1.8rem;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			}
+		.HDTITLE p
+			{
+			font-size: 0.6rem;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(+150%);
+			right: 0;
+			}
 		
-	#MENU
-		{
-		position: absolute;
-		right: 12%;
-		bottom: 10%;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		overflow: hidden;
-		}
-		
-	#MENU li
-		{
-		width: 120px;
-		height: 50px;
-		line-height: 50px;
-		text-align: center;
-		float: left;
-		padding 0;
-		margin: 0 1px;
-		background-color: #828278;
-		}
-		
-	#MENU li a
-		{
-		color: #fcfcfc;
-		text-decoration: none;
-		padding: 25px;
-		}
-	#thumbnail
-		{
-		width: 1000px;
-		height: 100px;
-		}
-	
-	.bold
+	.bold_underline
 		{
 		font-weight: bold;
+		text-decoration: underline;
 		}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	}
+
+	/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+	display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+	display: none;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#about:checked ~ #all_content,
+#ghost:checked ~ #programming_content,
+#balloon:checked ~ #design_content {
+	display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+	background-color: #919187;
+	color: #fff;
+}
+
+img
+	{
+	border-radius: 10px;
+	border:solid 1px #a0a0a0;
+	}
 }
