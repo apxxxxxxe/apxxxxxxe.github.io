@@ -31,11 +31,10 @@
 		}
 
 /* ********************************************** */
-/* 見出し */
 
-	h1, h2, h3, h4, h5, h6
+	h1, h2, h3, p
 		{
-		margin: 1em 0;
+		line-height: 1.8em;
 		padding: 0;
 		font-weight: normal;
 		}
@@ -55,26 +54,10 @@
 		}
 	p
 		{
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 		}
 
 /* ********************************************** */
-/* ブロック要素 */
-
-	/* リスト */
-
-	/* アドレス */
-
-	/* 引用 */
-
-	/* 整形済みテキスト */
-
-	/* 罫線 */
-
-/* ********************************************** */
-/* インライン要素 */
-
-	/* アンカー */	
 	a
 		{
 		}
@@ -96,15 +79,7 @@
 			color: #01608c;
 			}
 
-	/* 改行 */
-	br
-		{
-		letter-spacing: normal;
-		}
-
 /* ********************************************** */
-/* レイアウト */
-		
 	#HEADER, .partition, #FOOTER
 		{
 		width: auto;
@@ -159,7 +134,7 @@
 	.text
 		{
 		width: 50%;
-		height: 80%;
+		height: auto;
 		padding: 2%5% 8% 5%;
 		margin: 0 auto;
 		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
@@ -167,7 +142,15 @@
 		
 	#FOOTER
 		{
+		position: relative;
 		padding: 5%;
+		}
+	#FOOTER a
+		{
+		position: absolute;
+		right: 50%;
+		transform: translateX(-50%);		
+		color: #fff;
 		}
 
 	.HDTITLE
@@ -183,20 +166,22 @@
 	
 		.HDTITLE h1
 			{
+			width: auto;
 			font-size: 1.8rem;
+			line-height: 1.8rem;
 			margin: 0;
 			position: absolute;
-			top: 50%;
 			transform: translateY(-50%);
 			right: 0;
 			}
 		.HDTITLE p
 			{
-			font-size: 0.6rem;
+			width: auto;
+			font-size: 0.3rem;
+			line-height: 0.3rem;
 			margin: 0;
 			position: absolute;
-			top: 50%;
-			transform: translateY(+150%);
+			transform: translateY(+400%);
 			right: 0;
 			}
 		
@@ -206,40 +191,40 @@
 		text-decoration: underline;
 		}
 
-/*タブ切り替え全体のスタイル*/
-.tabs {
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
+	/*タブ切り替え全体のスタイル*/
+	.tabs {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		}
+
+		/*ラジオボタンを全て消す*/
+	input[name="tab_item"] {
+		display: none;
 	}
 
-	/*ラジオボタンを全て消す*/
-input[name="tab_item"] {
-	display: none;
-}
-
-/*タブ切り替えの中身のスタイル*/
-.tab_content {
-	display: none;
-}
-
-
-/*選択されているタブのコンテンツのみを表示*/
-#about:checked ~ #all_content,
-#ghost:checked ~ #programming_content,
-#balloon:checked ~ #design_content {
-	display: block;
-}
-
-/*選択されているタブのスタイルを変える*/
-.tabs input:checked + .tab_item {
-	background-color: #919187;
-	color: #fff;
-}
-
-img
-	{
-	border-radius: 10px;
-	border:solid 1px #a0a0a0;
+	/*タブ切り替えの中身のスタイル*/
+	.tab_content {
+		display: none;
 	}
+
+
+	/*選択されているタブのコンテンツのみを表示*/
+	#about:checked ~ #about_content,
+	#ghost:checked ~ #ghost_content,
+	#balloon:checked ~ #balloon_content {
+		display: block;
+	}
+
+	/*選択されているタブのスタイルを変える*/
+	.tabs input:checked + .tab_item {
+		background-color: #919187;
+		color: #fff;
+	}
+
+	img[alt="thumbnail"]
+		{
+		border-radius: 10px;
+		border:solid 1px #a0a0a0;
+		}
 }
