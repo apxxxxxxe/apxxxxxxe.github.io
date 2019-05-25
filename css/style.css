@@ -1,75 +1,60 @@
 @charset "UTF-8";
-@media screen{
 
-/* ********************************************** */
- /* カスタマイズ項目 */
- 
-	/* 横幅 */
-
-	/* ヘッダー画像 */
-
-	/* 見出し画像 */
-
-/* ********************************************** */
-/* 全体 */
 	html, body
 		{
-		height: 100%;
+		min-height: 100vh;
 		margin: 0;
 		padding: 0;
-		background-color: #d7d2c3;
 		}
 	html
 		{
-		font-size: 100%;
 		}
 	body
 		{
-		text-align: left;
+		position: relative;
+		padding: 5vmax 0;/*#FOOTERのheightと合わせる*/
+		box-sizing: border-box;/*paddingまで含めてmin-height:100vhに*/
 		color: #323232;
+		background-color: #d7d2c3;
 		font-family: "UD デジタル 教科書体 N-R", "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
 		}
 
-/* ********************************************** */
-
-	h1, h2, h3, p
+/* ******************************************************************************************** */
+	h1, h2, h3,h4, h5, h6, p
 		{
-		line-height: 1.8em;
 		padding: 0;
 		font-weight: normal;
+		line-height: 1.5;
 		}
 	h1	
 		{
-		font-size: 2rem;		
-		}
-	h2
-		{
-		margin-left: 0.8rem;
-		font-size: 1.6rem;
 		}
 	h3
 		{
 		color: #b93a21;
-		font-size: 1.2rem;
+		font-size: 1.5vmax;
+		padding-left: 1vmax;
+		border-left: solid 5px #843b43;
+		border-bottom: solid 1px #843b43;
 		}
-	p
+	h4
 		{
-		font-size: 0.9rem;
+		}
+	h5
+		{
+		}
+	h6
+		{
 		}
 
-/* ********************************************** */
 	a
 		{
+		font-weight: bold;
 		}
 		
-		a:link
+		a:link, a:visited
 			{
 			text-decoration: none;
-			color: #397d99;
-			}
-			
-		a:visited
-			{
 			color: #397d99;
 			}
 			
@@ -79,153 +64,155 @@
 			color: #01608c;
 			}
 
-/* ********************************************** */
+	img[alt="thumbnail"]
+		{
+		width: 15%;
+		border-radius: 0.8vw;
+		border:solid 1px #a0a0a0;
+		}
+
+/* ******************************************************************************************** */
+
 	#HEADER, .partition, #FOOTER
 		{
-		width: auto;
-		height: 5%;
+		width: 100%;
+		height: 5vmax;
 		margin: 0;
-		position: relative;
 		color: #fcfcfc;
 		background-color: #424242;		
+		box-sizing: border-box;
 		}
+
+/* ******************************************************************************************** */
 
 	#HEADER
 		{
-		position: relative;
-		padding-bottom: 5%;
-		}
-	
-	#MENU
-		{
-		width: auto;
-		height: auto;
 		position: absolute;
-		right: 10%;
-		top: 50%;
-		transform: translateY(-50%);		
+		top: 0;
 		}
-	
-		#MENU label
+		#TITLEpic
 			{
-			position: relative;
-			width: auto;
-			height: 2.4rem;
-			line-height: 2.4rem;
-			text-align: center;
-			margin-right: 2px;
-			padding: 0 1rem;
-			background-color: #505050;
-			color: #919187;
-			display: block;
-			float: left;
-			text-align: center;			
-			transition-property: color, background-color;
-			transition-duration: 0.2s;
-			transition-timing-function: ease-in-out;
-			}
-
-		#MENU label:hover
-			{
-			background-color: #919187;
-			color: #fff;
-			}
-		
-	.text
-		{
-		width: 70%;
-		max-width: 600px;
-		height: auto;
-		padding: 2%5% 8% 5%;
-		margin: 0 auto;
-		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
-		}
-		
-	#FOOTER
-		{
-		position: relative;
-		padding: 5%;
-		}
-	#FOOTER a
-		{
-		position: absolute;
-		right: 50%;
-		transform: translateX(-50%);		
-		color: #fff;
-		}
-
-	.HDTITLE
-		{
-		width: 10rem;
-		height: auto;
-		position: absolute;
-		left: 10rem;
-		top: 50%;
-		transform: translateY(-50%);
-		background-color: white;
-		}
-	
-		.HDTITLE h1
-			{
-			width: auto;
-			font-size: 1.8rem;
-			line-height: 1.8rem;
-			margin: 0;
+			min-width: 30%;
+			height: 50%;
 			position: absolute;
-			transform: translateY(-50%);
-			right: 0;
+			left: 10%;
+			transform: translateX(-50%);		
+			top: 50%;
+			transform: translateY(-50%);		
+			background: url("../img/title.png") no-repeat; 
+			background-size: contain;
 			}
-		.HDTITLE p
-			{
-			width: auto;
-			font-size: 0.3rem;
-			line-height: 0.3rem;
-			margin: 0;
-			position: absolute;
-			transform: translateY(+400%);
-			right: 0;
-			}
-		
-	.bold_underline
-		{
-		font-weight: bold;
-		text-decoration: underline;
-		}
 
-	/*タブ切り替え全体のスタイル*/
-	.tabs {
-		width: 100%;
-		height: 100%;
+/* ******************************************************************************************** */
+	
+	.contents
+		{
 		margin: 0 auto;
 		}
 
-		/*ラジオボタンを全て消す*/
-	input[name="tab_item"] {
+	input[name="tab_item"], .tab_content
+		{
 		display: none;
-	}
+		}
 
-	/*タブ切り替えの中身のスタイル*/
-	.tab_content {
-		display: none;
-	}
-
-
-	/*選択されているタブのコンテンツのみを表示*/
 	#about:checked ~ #about_content,
 	#ghost:checked ~ #ghost_content,
-	#balloon:checked ~ #balloon_content {
+	#balloon:checked ~ #balloon_content
+		{
 		display: block;
-	}
+		}
 
-	/*選択されているタブのスタイルを変える*/
-	.tabs input:checked + .tab_item {
+	#about:checked ~ label[for="about"],
+	#ghost:checked ~ label[for="ghost"],
+	#balloon:checked ~ label[for="balloon"]
+		{
+		background-color: #f4f1eb;
+		color: #323232;
+		}
+
+
+@media screen and (max-width:480px)/*小*/
+		{
+		.contents
+			{
+			width: calc(80vw + 6vw);/*.textとlabelのwidthの和*/
+			min-height: 70vh;/*.textのmin-height*/
+			}
+		.text
+			{
+			width: 80vw;
+			min-height: 70vh;
+			margin: 0;
+			padding: 2% 5% 8% 5%;
+			position: relative;
+			background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+			background-size: auto 70vmin;
+			box-sizing: border-box;
+			float: left;
+			}
+		h2
+			{
+			font-size: 2vmax;
+			}
+		p
+			{
+			font-size: 1.2vmax;
+			margin-left: 20px;
+			}
+
+		}
+
+@media screen and (min-width:481px)/*大*/
+		{		
+		.contents
+			{
+			width: calc(50vw + 6vw);/*.textとlabelのwidthの和*/
+			min-height: 90vh;/*.textのmin-height*/
+			}
+		.text
+			{
+			width: 50vw;
+			min-height: 90vh;
+			padding: 2% 8% 8% 5%;
+			position: relative;
+			background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+			background-size: auto 30vmax;
+			box-sizing: border-box;
+			float: left;
+			}
+		h2
+			{
+			font-size: 1.8vmax;
+			}
+		p
+			{
+			font-size: 0.9vmax;
+			margin-left: 0.9vmax;
+			}
+		}
+
+	label[class="tab_item"]
+		{
+		width: 6vw;
+		text-align: center;
+		font-size: 1vw;
+		margin-bottom: 10px;
+		padding: 2vmin 0.75vmin;
 		background-color: #919187;
 		color: #fff;
-	}
-
-	img[alt="thumbnail"]
-		{
-		border-radius: 10px;
-		border:solid 1px #a0a0a0;
+		display: inline-block;
+		transition-property: color, background-color;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+		cursor: pointer;
+		border-radius: 0 0.8vw 0.8vw 0;
+		box-sizing: border-box;
 		}
-}
+
+/* ******************************************************************************************** */
+
+	#FOOTER
+		{
+		position: absolute;
+		bottom: 0;
+		}
