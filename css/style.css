@@ -1,218 +1,229 @@
 @charset "UTF-8";
 
-	html, body
+@keyframes show
+	{
+	from
 		{
-		min-height: 100vh;
-		margin: 0;
-		padding: 0;
+		opacity: 0;
 		}
-	html
+	to
 		{
+		opacity: 1;
 		}
-	body
-		{
-		position: relative;
-		padding: 5vmax 0;/*#FOOTERのheightと合わせる*/
-		box-sizing: border-box;/*paddingまで含めてmin-height:100vhに*/
-		color: #323232;
-		background-color: #d7d2c3;
-		font-family: "UD デジタル 教科書体 N-R", "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
-		}
+	}
+
+html, body
+	{
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	}
+body
+	{
+	position: relative;
+	padding: 5vmax 0;/*#HEADER,#FOOTERのheightと合わせる*/
+	box-sizing: border-box;
+	color: #323232;
+	background-color: #d7d2c3;
+	font-family: "UD デジタル 教科書体 N-R", "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
+	}
 
 /* ******************************************************************************************** */
-	h1, h2, h3,h4, h5, h6, p
-		{
-		padding: 0;
-		font-weight: normal;
-		line-height: 1.5;
-		}
-	h1	
-		{
-		}
-	h3
-		{
-		color: #b93a21;
-		font-size: 1.5vmax;
-		padding-left: 1vmax;
-		border-left: solid 5px #843b43;
-		border-bottom: solid 1px #843b43;
-		}
-	h4
-		{
-		}
-	h5
-		{
-		}
-	h6
-		{
-		}
+h1, h2, h3,h4, h5, h6, p
+	{
+	padding: 0;
+	font-weight: normal;
+	line-height: 1.5;
+	}
+h1	
+	{
+	}
+h3
+	{
+	color: #b93a21;
+	font-size: 1.5vmax;
+	padding-left: 1vmax;
+	border-left: solid 5px #843b43;
+	border-bottom: solid 1px #843b43;
+	}
+h4
+	{
+	}
+h5
+	{
+	}
+h6
+	{
+	}
 
-	a
+a
+	{
+	font-weight: bold;
+	}
+	
+	a:link, a:visited
 		{
-		font-weight: bold;
+		text-decoration: none;
+		color: #397d99;
 		}
 		
-		a:link, a:visited
-			{
-			text-decoration: none;
-			color: #397d99;
-			}
-			
-		a:hover, a:active, a:focus
-			{
-			text-decoration: underline;
-			color: #01608c;
-			}
-
-	img[alt="thumbnail"]
+	a:hover, a:active, a:focus
 		{
-		width: 15%;
-		border-radius: 0.8vw;
-		border:solid 1px #a0a0a0;
+		text-decoration: underline;
+		color: #01608c;
 		}
+
+img[alt="thumbnail"]
+	{
+	width: 15%;
+	border-radius: 0.8vw;
+	border:solid 1px #a0a0a0;
+	}
 
 /* ******************************************************************************************** */
 
-	#HEADER, .partition, #FOOTER
-		{
-		width: 100%;
-		height: 5vmax;
-		margin: 0;
-		color: #fcfcfc;
-		background-color: #424242;		
-		box-sizing: border-box;
-		}
+#HEADER, .partition, #FOOTER
+	{
+	width: 100%;
+	height: 5vmax;
+	margin: 0;
+	color: #fcfcfc;
+	background-color: #424242;		
+	box-sizing: border-box;
+	}
 
 /* ******************************************************************************************** */
 
-	#HEADER
+#HEADER
+	{
+	position: absolute;
+	top: 0;
+	}
+	#TITLEpic
 		{
+		min-width: 30%;
+		height: 50%;
 		position: absolute;
-		top: 0;
+		left: 10%;
+		transform: translateX(-50%);		
+		top: 50%;
+		transform: translateY(-50%);		
+		background: url("../img/title.png") no-repeat; 
+		background-size: contain;
 		}
-		#TITLEpic
-			{
-			min-width: 30%;
-			height: 50%;
-			position: absolute;
-			left: 10%;
-			transform: translateX(-50%);		
-			top: 50%;
-			transform: translateY(-50%);		
-			background: url("../img/title.png") no-repeat; 
-			background-size: contain;
-			}
 
 /* ******************************************************************************************** */
-	
-	.contents
-		{
-		margin: 0 auto;
-		}
 
-	input[name="tab_item"], .tab_content
-		{
-		display: none;
-		}
+.contents
+	{
+	margin: 0 auto;
+	}
 
-	#about:checked ~ #about_content,
-	#ghost:checked ~ #ghost_content,
-	#balloon:checked ~ #balloon_content
-		{
-		display: block;
-		}
+input[name="tab_item"], .tab_content
+	{
+	display: none;
+	}
 
-	#about:checked ~ label[for="about"],
-	#ghost:checked ~ label[for="ghost"],
-	#balloon:checked ~ label[for="balloon"]
-		{
-		background-color: #f4f1eb;
-		color: #323232;
-		}
+#about:checked ~ #about_content,
+#ghost:checked ~ #ghost_content,
+#balloon:checked ~ #balloon_content
+	{
+	display: block;
+/*	animation: show 0.1s linear 0s;*/
+	}
+
+#about:checked ~ label[for="about"],
+#ghost:checked ~ label[for="ghost"],
+#balloon:checked ~ label[for="balloon"]
+	{
+	background-color: #f4f1eb;
+	color: #424242;
+	cursor: default;
+	}
 
 
 @media screen and (max-width:480px)/*小*/
+	{
+	.contents
 		{
-		.contents
-			{
-			width: calc(80vw + 6vw);/*.textとlabelのwidthの和*/
-			min-height: 70vh;/*.textのmin-height*/
-			}
-		.text
-			{
-			width: 80vw;
-			min-height: 70vh;
-			margin: 0;
-			padding: 2% 5% 8% 5%;
-			position: relative;
-			background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
-			background-size: auto 70vmin;
-			box-sizing: border-box;
-			float: left;
-			}
-		h2
-			{
-			font-size: 2vmax;
-			}
-		p
-			{
-			font-size: 1.2vmax;
-			margin-left: 20px;
-			}
-
+		width: calc(80vw + 6vw);/*.textとlabelのwidthの和*/
+		min-height: 70vh;/*.textのmin-height*/
 		}
+	.text
+		{
+		width: 80vw;
+		min-height: 70vh;
+		margin: 0;
+		padding: 2% 5% 8% 5%;
+		position: relative;
+		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+		background-size: auto 70vmin;
+		box-sizing: border-box;
+		float: left;
+		}
+	h2
+		{
+		font-size: 2vmax;
+		}
+	p
+		{
+		font-size: 1.2vmax;
+		margin-left: 20px;
+		}
+
+	}
 
 @media screen and (min-width:481px)/*大*/
-		{		
-		.contents
-			{
-			width: calc(50vw + 6vw);/*.textとlabelのwidthの和*/
-			min-height: 90vh;/*.textのmin-height*/
-			}
-		.text
-			{
-			width: 50vw;
-			min-height: 90vh;
-			padding: 2% 8% 8% 5%;
-			position: relative;
-			background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
-			background-size: auto 30vmax;
-			box-sizing: border-box;
-			float: left;
-			}
-		h2
-			{
-			font-size: 1.8vmax;
-			}
-		p
-			{
-			font-size: 0.9vmax;
-			margin-left: 0.9vmax;
-			}
-		}
-
-	label[class="tab_item"]
+	{		
+	.contents
 		{
-		width: 6vw;
-		text-align: center;
-		font-size: 1vw;
-		margin-bottom: 10px;
-		padding: 2vmin 0.75vmin;
-		background-color: #919187;
-		color: #fff;
-		display: inline-block;
-		transition-property: color, background-color;
-		transition-duration: 0.2s;
-		transition-timing-function: ease;
-		cursor: pointer;
-		border-radius: 0 0.8vw 0.8vw 0;
-		box-sizing: border-box;
+		width: calc(50vw + 6vw);/*.textとlabelのwidthの和*/
+		min-height: 90vh;/*.textのmin-height*/
 		}
+	.text
+		{
+		width: 50vw;
+		min-height: 90vh;
+		padding: 2% 8% 8% 5%;
+		position: relative;
+		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+		background-size: auto 30vmax;
+		box-sizing: border-box;
+		float: left;
+		}
+	h2
+		{
+		font-size: 1.8vmax;
+		}
+	p
+		{
+		font-size: 0.9vmax;
+		margin-left: 0.9vmax;
+		}
+	}
+
+label[class="tab_item"]
+	{
+	width: 6vw;
+	text-align: center;
+	font-size: 1vw;
+	margin-bottom: 10px;
+	padding: 2vmin 0.75vmin;
+	background-color: #919187;
+	color: #fcfcfc;
+	display: inline-block;
+	transition-property: color, background-color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+	cursor: pointer;
+	border-radius: 0 0.8vw 0.8vw 0;
+	box-sizing: border-box;
+	}
 
 /* ******************************************************************************************** */
 
-	#FOOTER
-		{
-		position: absolute;
-		bottom: 0;
-		}
+#FOOTER
+	{
+	position: absolute;
+	bottom: 0;
+	}
