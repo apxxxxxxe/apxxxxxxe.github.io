@@ -156,12 +156,12 @@ input[name="tab_item"], .tab_content
 	.contents
 		{
 		width: calc(80vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
-		min-height: 70vh;/*.textのmin-height*/
+		min-height: 60vh;/*.textのmin-height*/
 		}
 	.text
 		{
 		width: 80vw;
-		min-height: 70vh;
+		min-height: 60vh;
 		margin: 0;
 		padding: 2% 5% 8% 5%;
 		position: relative;
