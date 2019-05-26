@@ -38,10 +38,19 @@ h1, h2, h3,h4, h5, h6, p
 h1	
 	{
 	}
+	h2
+		{
+		font-size: calc(16px + 1vmax);
+		}
+	p
+		{
+		font-size: calc(8px + 0.5vmax);
+		margin-left: calc(8px + 0.5vmax);
+		}
 h3
 	{
 	color: #b93a21;
-	font-size: 1.5vmax;
+	font-size: calc(16px + 0.5vmax);
 	padding-left: 1vmax;
 	border-left: solid 5px #843b43;
 	border-bottom: solid 1px #843b43;
@@ -146,7 +155,7 @@ input[name="tab_item"], .tab_content
 	{
 	.contents
 		{
-		width: calc(80vw + 6vw);/*.textとlabelのwidthの和*/
+		width: calc(80vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
 		min-height: 70vh;/*.textのmin-height*/
 		}
 	.text
@@ -161,15 +170,6 @@ input[name="tab_item"], .tab_content
 		box-sizing: border-box;
 		float: left;
 		}
-	h2
-		{
-		font-size: 2vmax;
-		}
-	p
-		{
-		font-size: 1.2vmax;
-		margin-left: 20px;
-		}
 
 	}
 
@@ -177,7 +177,7 @@ input[name="tab_item"], .tab_content
 	{		
 	.contents
 		{
-		width: calc(50vw + 6vw);/*.textとlabelのwidthの和*/
+		width: calc(50vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
 		min-height: 90vh;/*.textのmin-height*/
 		}
 	.text
@@ -191,24 +191,17 @@ input[name="tab_item"], .tab_content
 		box-sizing: border-box;
 		float: left;
 		}
-	h2
-		{
-		font-size: 1.8vmax;
-		}
-	p
-		{
-		font-size: 0.9vmax;
-		margin-left: 0.9vmax;
-		}
 	}
 
 label[class="tab_item"]
 	{
-	width: 6vw;
+	width: calc(5vh / 3 * 6);
+	height: 5vh;
+	line-height: 5vh;
 	text-align: center;
-	font-size: 1vw;
+	font-family: Sans-serif;
+	font-size: calc(5vh / 3);
 	margin-bottom: 10px;
-	padding: 2vmin 0.75vmin;
 	background-color: #919187;
 	color: #fcfcfc;
 	display: inline-block;
@@ -216,10 +209,14 @@ label[class="tab_item"]
 	transition-duration: 0.2s;
 	transition-timing-function: ease;
 	cursor: pointer;
-	border-radius: 0 0.8vw 0.8vw 0;
+	border-radius: 0 0.8vh 0.8vh 0;
 	box-sizing: border-box;
 	}
 
+br[class="adjust"]
+	{
+	
+	}
 /* ******************************************************************************************** */
 
 #FOOTER
