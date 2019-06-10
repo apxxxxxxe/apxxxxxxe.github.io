@@ -59,6 +59,7 @@ h3
 	}
 h4
 	{
+	font-size: calc(8px + 0.5vmax);
 	}
 h5
 	{
@@ -241,5 +242,9 @@ label[class="tab_item"]:hover
 .small
 	{
 		font-size: calc(calc(8px + 0.5vmax)/5*4);
-		margin-left: calc(calc(8px + 0.5vmax)/5*4);	
+	}
+	
+.history p
+	{
+		font-size: calc(calc(8px + 0.5vmax)/5*4);
 	}
