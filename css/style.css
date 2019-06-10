@@ -24,8 +24,10 @@ body
 	padding: 5vmax 0;/*#HEADER,#FOOTERのheightと合わせる*/
 	box-sizing: border-box;
 	color: #323232;
-	background-color: #d7d2c3;
+	background-image: url("../img/bk_texture.png");
 	font-family: "UD デジタル 教科書体 N-R", "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
+	display: flex;
+	flex-direction: column;
 	}
 
 /* ******************************************************************************************** */
@@ -126,6 +128,16 @@ img[alt="thumbnail"]
 .contents
 	{
 	margin: 0 auto;
+	display: flex;
+	}
+
+.contentsmenu
+	{
+	height: 30vh;
+	width: 10%;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
 	}
 
 input[name="tab_item"], .tab_content
@@ -138,9 +150,10 @@ input[name="tab_item"], .tab_content
 #balloon:checked ~ #balloon_content
 	{
 	display: block;
-/*	animation: show 0.1s linear 0s;*/
+	animation: show 0.5s linear 0s;
 	}
 
+/*
 #about:checked ~ label[for="about"],
 #ghost:checked ~ label[for="ghost"],
 #balloon:checked ~ label[for="balloon"]
@@ -149,7 +162,7 @@ input[name="tab_item"], .tab_content
 	color: #424242;
 	cursor: default;
 	}
-
+*/
 
 @media screen and (max-width:480px)/*小*/
 	{
@@ -168,7 +181,7 @@ input[name="tab_item"], .tab_content
 		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
 		background-size: auto 70vmin;
 		box-sizing: border-box;
-		float: left;
+		box-shadow: 0 5px 5px #aaa;
 		}
 
 	}
@@ -182,45 +195,52 @@ input[name="tab_item"], .tab_content
 		}
 	.text
 		{
-		width: 50vw;
+		width: 45vw;
 		min-height: 90vh;
 		padding: 2% 8% 8% 5%;
 		position: relative;
 		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
 		background-size: auto 30vmax;
 		box-sizing: border-box;
-		float: left;
+		box-shadow: 0 5px 5px #aaa;
 		}
 	}
 
 label[class="tab_item"]
 	{
-	width: calc(5vh / 3 * 6);
+	width: 100%;
 	height: 5vh;
 	line-height: 5vh;
 	text-align: center;
-	font-family: Sans-serif;
-	font-size: calc(5vh / 3);
-	margin-bottom: 10px;
+	font-family: "メイリオ",Sans-serif;
+	font-size: 60%;
+	margin: 10px 0;
 	background-color: #919187;
 	color: #fcfcfc;
-	display: inline-block;
 	transition-property: color, background-color;
 	transition-duration: 0.2s;
 	transition-timing-function: ease;
 	cursor: pointer;
 	border-radius: 0 0.8vh 0.8vh 0;
-	box-sizing: border-box;
+	box-shadow: 0 2px 2px #aaa;
 	}
 
-br[class="adjust"]
+label[class="tab_item"]:hover
 	{
-	
+	background-color: #f4f1eb;
+	color: #424242;
 	}
+
 /* ******************************************************************************************** */
 
 #FOOTER
 	{
 	position: absolute;
 	bottom: 0;
+	}
+
+.small
+	{
+		font-size: calc(calc(8px + 0.5vmax)/5*4);
+		margin-left: calc(calc(8px + 0.5vmax)/5*4);	
 	}
