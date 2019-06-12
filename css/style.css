@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru");
+@import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic");
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+1p");
 
 @keyframes show
 	{
@@ -25,37 +28,40 @@ body
 	box-sizing: border-box;
 	color: #323232;
 	background-image: url("../img/bk_texture.png");
-	font-family: "メイリオ","ＭＳ Ｐゴシック", Sans-serif;
+	font-family: "M PLUS 1p", sans-serif;
 	display: flex;
 	flex-direction: column;
 	}
 
 /* ******************************************************************************************** */
-h1, h2, h3,h4, h5, h6, p
+h1, h2, h3, h4, h5, h6, p
 	{
 	padding: 0;
 	font-weight: normal;
-	line-height: 1.8;
+	line-height: 1.5;
 	}
 h1	
 	{
 	}
-	h2
-		{
-		font-size: calc(16px + 1vmax);
-		}
-	p
-		{
-		font-size: calc(8px + 0.5vmax);
-		margin-left: calc(8px + 0.5vmax);
-		}
+h2
+	{
+	color: #643;
+	font-size: calc(16px + 1vmax);
+	}
+p
+	{
+	color: #643;
+	font-size: calc(8px + 0.4vmax);
+	font-family: 'Kosugi Maru', sans-serif;
+	margin-left: calc(8px + 0.5vmax);
+	}
 h3
 	{
-	color: #b93a21;
+	color: #a22;
 	font-size: calc(16px + 0.5vmax);
 	padding-left: 1vmax;
-	border-left: solid 5px #843b43;
-	border-bottom: solid 1px #843b43;
+	border-left: solid 5px #a22;
+	border-bottom: solid 1px #a22;
 	}
 h4
 	{
@@ -70,19 +76,19 @@ h6
 
 a
 	{
-	font-weight: bold;
+	font-family: 'Sawarabi Gothic', sans-serif;
 	}
 	
 	a:link, a:visited
 		{
-		text-decoration: none;
-		color: #397d99;
+		text-decoration: underline;
+		color: #885;
 		}
 		
 	a:hover, a:active, a:focus
 		{
 		text-decoration: underline;
-		color: #01608c;
+		color: #a22;
 		}
 
 img[alt="thumbnail"]
@@ -131,6 +137,13 @@ img[alt="thumbnail"]
 	margin: 0 auto;
 	display: flex;
 	}
+.text
+	{
+	background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+	position: relative;
+	box-sizing: border-box;
+	box-shadow: 0 5px 5px #aaa;
+	}
 
 .contentsmenu
 	{
@@ -176,13 +189,8 @@ input[name="tab_item"], .tab_content
 		{
 		width: 80vw;
 		min-height: 60vh;
-		margin: 0;
 		padding: 2% 5% 8% 5%;
-		position: relative;
-		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
 		background-size: auto 70vmin;
-		box-sizing: border-box;
-		box-shadow: 0 5px 5px #aaa;
 		}
 
 	}
@@ -199,11 +207,7 @@ input[name="tab_item"], .tab_content
 		width: 45vw;
 		min-height: 90vh;
 		padding: 2% 8% 8% 5%;
-		position: relative;
-		background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
-		background-size: auto 30vmax;
-		box-sizing: border-box;
-		box-shadow: 0 5px 5px #aaa;
+		background-size: auto 25vmax;
 		}
 	}
 
@@ -241,10 +245,10 @@ label[class="tab_item"]:hover
 
 .small
 	{
-		font-size: calc(calc(8px + 0.5vmax)/5*4);
+	font-size: calc(calc(8px + 0.5vmax)/5*4);
 	}
 	
 .history p
 	{
-		font-size: calc(calc(8px + 0.5vmax)/5*4);
+	font-size: calc(calc(8px + 0.5vmax)/5*4);
 	}
