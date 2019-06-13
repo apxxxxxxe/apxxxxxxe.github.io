@@ -46,14 +46,14 @@ h1
 h2
 	{
 	color: #643;
-	font-size: calc(16px + 1vmax);
+	font-size: calc(16px + 1vw);
 	}
 p
 	{
 	color: #643;
-	font-size: calc(8px + 0.4vmax);
+	font-size: calc(8px + 0.5vw);
 	font-family: 'Kosugi Maru', sans-serif;
-	margin-left: calc(8px + 0.5vmax);
+	margin-left: calc(8px + 0.5vw);
 	}
 h3
 	{
@@ -178,39 +178,6 @@ input[name="tab_item"], .tab_content
 	}
 */
 
-@media screen and (max-width:480px)/*小*/
-	{
-	.contents
-		{
-		width: calc(80vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
-		min-height: 60vh;/*.textのmin-height*/
-		}
-	.text
-		{
-		width: 80vw;
-		min-height: 60vh;
-		padding: 2% 5% 8% 5%;
-		background-size: auto 70vmin;
-		}
-
-	}
-
-@media screen and (min-width:481px)/*大*/
-	{		
-	.contents
-		{
-		width: calc(50vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
-		min-height: 90vh;/*.textのmin-height*/
-		}
-	.text
-		{
-		width: 45vw;
-		min-height: 90vh;
-		padding: 2% 8% 8% 5%;
-		background-size: auto 25vmax;
-		}
-	}
-
 label[class="tab_item"]
 	{
 	width: 100%;
@@ -233,6 +200,83 @@ label[class="tab_item"]:hover
 	{
 	background-color: #f4f1eb;
 	color: #424242;
+	}
+
+@media screen and (max-width:480px)/*小*/
+	{
+	h1, h2, h3, h4, h5, h6, p
+		{
+		line-height: 1.4;
+		}
+	h1	
+		{
+		}
+	h2
+		{
+		font-size: 18px;
+		}
+	p
+		{
+		font-size: 11px;
+		margin-left: 11px;
+		}
+	h3
+		{
+		font-size: 16px;
+		padding-left: 8px;
+		}
+	h4
+		{
+		font-size: 12px;
+		}
+	h5
+		{
+		}
+	h6
+		{
+		}
+label[class="tab_item"]
+		{
+		font-size: 6px;		
+		}
+
+	.contents
+		{
+		width: 90vw;/*.textとlabelのwidthの和*/
+		min-height: 90vh;/*.textのmin-height*/
+		margin: 0 auto;
+		}
+	.text
+		{
+		width: 80vw;
+		min-height: 90vh;
+		padding: 2% 5% 8% 5%;
+		background-size: auto 70vmin;
+		}
+	.contentsmenu
+		{
+		width: 10vw;
+		}
+	.pconly
+		{
+		display: none;
+		}
+	}
+
+@media screen and (min-width:481px)/*大*/
+	{		
+	.contents
+		{
+		width: calc(50vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
+		min-height: 90vh;/*.textのmin-height*/
+		}
+	.text
+		{
+		width: 45vw;
+		min-height: 90vh;
+		padding: 2% 8% 8% 5%;
+		background-size: auto 25vmax;
+		}
 	}
 
 /* ******************************************************************************************** */
