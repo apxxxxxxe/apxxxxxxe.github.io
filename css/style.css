@@ -39,6 +39,8 @@ h1, h2, h3, h4, h5, h6, p
 	padding: 0;
 	font-weight: normal;
 	line-height: 1.5;
+	margin-left: 2rem;
+	margin-right: 2rem;
 	}
 h1	
 	{
@@ -46,14 +48,15 @@ h1
 h2
 	{
 	color: #643;
-	font-size: calc(16px + 1vw);
+	font-weight:bold;
+	font-size: calc(1rem + 1vw);
 	}
 p
 	{
 	color: #643;
-	font-size: calc(8px + 0.5vw);
+	font-size: calc(0.5rem + 0.5vw);
 	font-family: 'Kosugi Maru', sans-serif;
-	margin-left: calc(8px + 0.5vw);
+	margin-left: calc(2.5rem + 0.5vw);
 	}
 h3
 	{
@@ -65,7 +68,7 @@ h3
 	}
 h4
 	{
-	font-size: calc(8px + 0.5vmax);
+	font-size: calc(0.5rem + 0.5vmax);
 	}
 h5
 	{
@@ -93,7 +96,8 @@ a
 
 img[alt="thumbnail"]
 	{
-	width: 15%;
+	width: 5rem;
+	margin-right: 1rem;
 	border-radius: 0.8vw;
 	border:solid 1px #a0a0a0;
 	}
@@ -108,6 +112,7 @@ img[alt="thumbnail"]
 	color: #fcfcfc;
 	background-color: #424242;		
 	box-sizing: border-box;
+	box-shadow: 0 0 5px #000;
 	}
 
 /* ******************************************************************************************** */
@@ -159,6 +164,8 @@ input[name="tab_item"], .tab_content
 	display: none;
 	}
 
+/*
+
 #about:checked ~ #about_content,
 #ghost:checked ~ #ghost_content,
 #balloon:checked ~ #balloon_content
@@ -167,7 +174,6 @@ input[name="tab_item"], .tab_content
 	animation: show 0.5s linear 0s;
 	}
 
-/*
 #about:checked ~ label[for="about"],
 #ghost:checked ~ label[for="ghost"],
 #balloon:checked ~ label[for="balloon"]
@@ -291,8 +297,36 @@ label[class="tab_item"]
 	{
 	font-size: calc(calc(8px + 0.5vmax)/5*4);
 	}
+
+.history{
+	background: #ddc;
+	box-sizing:border-box;
+	padding: 1rem;
+	margin: 2rem 3rem 0;
+	border-radius: 1rem;
+}
 	
+.history h2
+	{
+	font-size: 0.8rem;
+	}
+
 .history p
 	{
-	font-size: calc(calc(8px + 0.5vmax)/5*4);
+	font-size: calc(calc(0.5rem + 0.5vmax)/5*4);
 	}
+
+.border{
+	margin:4rem 8rem;
+	border-top:dashed;
+	border-color: #a22;
+}
+
+.article{
+	width: 60vw;
+	padding: 2rem 0;
+	margin: 0 auto 1px;
+	background:#f4f1eb;
+	box-sizing:border-box;
+	border-radius: 0.5rem;
+}
