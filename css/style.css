@@ -1,0 +1,332 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru");
+@import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic");
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+1p");
+
+@keyframes show
+	{
+	from
+		{
+		opacity: 0;
+		}
+	to
+		{
+		opacity: 1;
+		}
+	}
+
+html, body
+	{
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	}
+body
+	{
+	position: relative;
+	padding: 5vmax 0;/*#HEADER,#FOOTERのheightと合わせる*/
+	box-sizing: border-box;
+	color: #323232;
+	background-image: url("../img/bk_texture.png");
+	font-family: "M PLUS 1p", sans-serif;
+	display: flex;
+	flex-direction: column;
+	}
+
+/* ******************************************************************************************** */
+h1, h2, h3, h4, h5, h6, p
+	{
+	padding: 0;
+	font-weight: normal;
+	line-height: 1.5;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	}
+h1	
+	{
+	}
+h2
+	{
+	color: #643;
+	font-weight:bold;
+	font-size: calc(1rem + 1vw);
+	}
+p
+	{
+	color: #643;
+	font-size: calc(0.5rem + 0.5vw);
+	font-family: 'Kosugi Maru', sans-serif;
+	margin-left: calc(2.5rem + 0.5vw);
+	}
+h3
+	{
+	color: #a22;
+	font-size: calc(16px + 0.5vmax);
+	padding-left: 1vmax;
+	border-left: solid 5px #a22;
+	border-bottom: solid 1px #a22;
+	}
+h4
+	{
+	font-size: calc(0.5rem + 0.5vmax);
+	}
+h5
+	{
+	}
+h6
+	{
+	}
+
+a
+	{
+	font-family: 'Sawarabi Gothic', sans-serif;
+	}
+	
+	a:link, a:visited
+		{
+		text-decoration: underline;
+		color: #885;
+		}
+		
+	a:hover, a:active, a:focus
+		{
+		text-decoration: underline;
+		color: #a22;
+		}
+
+img[alt="thumbnail"]
+	{
+	width: 5rem;
+	margin-right: 1rem;
+	border-radius: 0.8vw;
+	border:solid 1px #a0a0a0;
+	}
+
+/* ******************************************************************************************** */
+
+#HEADER, .partition, #FOOTER
+	{
+	width: 100%;
+	height: 5vmax;
+	margin: 0;
+	color: #fcfcfc;
+	background-color: #424242;		
+	box-sizing: border-box;
+	box-shadow: 0 0 5px #000;
+	}
+
+/* ******************************************************************************************** */
+
+#HEADER
+	{
+	position: absolute;
+	top: 0;
+	}
+	#TITLEpic
+		{
+		min-width: 30%;
+		height: 50%;
+		position: absolute;
+		left: 10%;
+		transform: translateX(-50%);		
+		top: 50%;
+		transform: translateY(-50%);		
+		background: url("../img/title.png") no-repeat; 
+		background-size: contain;
+		}
+
+/* ******************************************************************************************** */
+
+.contents
+	{
+	margin: 0 auto;
+	display: flex;
+	}
+.text
+	{
+	background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+	position: relative;
+	box-sizing: border-box;
+	box-shadow: 0 5px 5px #aaa;
+	}
+
+.contentsmenu
+	{
+	height: 30vh;
+	width: 10%;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	}
+
+input[name="tab_item"], .tab_content
+	{
+	display: none;
+	}
+
+/*
+
+#about:checked ~ #about_content,
+#ghost:checked ~ #ghost_content,
+#balloon:checked ~ #balloon_content
+	{
+	display: block;
+	animation: show 0.5s linear 0s;
+	}
+
+#about:checked ~ label[for="about"],
+#ghost:checked ~ label[for="ghost"],
+#balloon:checked ~ label[for="balloon"]
+	{
+	background-color: #f4f1eb;
+	color: #424242;
+	cursor: default;
+	}
+*/
+
+label[class="tab_item"]
+	{
+	width: 100%;
+	height: 5vh;
+	line-height: 5vh;
+	text-align: center;
+	font-size: 60%;
+	margin: 10px 0;
+	background-color: #919187;
+	color: #fcfcfc;
+	transition-property: color, background-color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+	cursor: pointer;
+	border-radius: 0 0.8vh 0.8vh 0;
+	box-shadow: 0 2px 2px #aaa;
+	}
+
+label[class="tab_item"]:hover
+	{
+	background-color: #f4f1eb;
+	color: #424242;
+	}
+
+@media screen and (max-width:480px)/*小*/
+	{
+	h1, h2, h3, h4, h5, h6, p
+		{
+		line-height: 1.4;
+		}
+	h1	
+		{
+		}
+	h2
+		{
+		font-size: 18px;
+		}
+	p
+		{
+		font-size: 11px;
+		margin-left: 11px;
+		}
+	h3
+		{
+		font-size: 16px;
+		padding-left: 8px;
+		}
+	h4
+		{
+		font-size: 12px;
+		}
+	h5
+		{
+		}
+	h6
+		{
+		}
+label[class="tab_item"]
+		{
+		font-size: 6px;		
+		}
+
+	.contents
+		{
+		width: 90vw;/*.textとlabelのwidthの和*/
+		min-height: 90vh;/*.textのmin-height*/
+		margin: 0 auto;
+		}
+	.text
+		{
+		width: 80vw;
+		min-height: 90vh;
+		padding: 2% 5% 8% 5%;
+		background-size: auto 70vmin;
+		}
+	.contentsmenu
+		{
+		width: 10vw;
+		}
+	.pconly
+		{
+		display: none;
+		}
+	}
+
+@media screen and (min-width:481px)/*大*/
+	{		
+	.contents
+		{
+		width: calc(50vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
+		min-height: 90vh;/*.textのmin-height*/
+		}
+	.text
+		{
+		width: 45vw;
+		min-height: 90vh;
+		padding: 2% 8% 8% 5%;
+		background-size: auto 25vmax;
+		}
+	}
+
+/* ******************************************************************************************** */
+
+#FOOTER
+	{
+	position: absolute;
+	bottom: 0;
+	}
+
+.small
+	{
+	font-size: calc(calc(8px + 0.5vmax)/5*4);
+	}
+
+.history{
+	background: #ddc;
+	box-sizing:border-box;
+	padding: 1rem;
+	margin: 2rem 3rem 0;
+	border-radius: 1rem;
+}
+	
+.history h2
+	{
+	font-size: 0.8rem;
+	}
+
+.history p
+	{
+	font-size: calc(calc(0.5rem + 0.5vmax)/5*4);
+	}
+
+.border{
+	margin:4rem 8rem;
+	border-top:dashed;
+	border-color: #a22;
+}
+
+.article{
+	width: 60vw;
+	padding: 2rem 0;
+	margin: 0 auto 1px;
+	background:#f4f1eb;
+	box-sizing:border-box;
+	border-radius: 0.5rem;
+}
