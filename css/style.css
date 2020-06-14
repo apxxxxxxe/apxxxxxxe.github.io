@@ -324,9 +324,9 @@ label[class="tab_item"]
 
 .article{
 	width: 60vw;
-	padding: 2rem 0;
+	padding: 3rem 0 6rem;
 	margin: 1rem auto 1rem;
 	background:#f4f1eb;
 	box-sizing:border-box;
-	border-radius: 0.5rem;
+	border-radius: 4rem;
 }
