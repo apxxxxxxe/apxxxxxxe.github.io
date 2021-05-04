@@ -34,6 +34,23 @@ body
 	}
 
 /* ******************************************************************************************** */
+  .wrapper{
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    /*background: #f6f6ec;*/
+    background: #eeeee4;
+    border-radius: 4rem;
+
+  }
+
+  #rightmenu{
+    width: 25vw;
+    float:right;
+    background: #e6e6dc;
+  }
+
+
 h1, h2, h3, h4, h5, h6, p
 	{
 	padding: 0;
@@ -50,6 +67,9 @@ h2
 	color: #643;
 	font-weight:bold;
 	font-size: calc(1rem + 1vw);
+  padding-bottom: 0.3em;
+  padding-left: 0.4em;
+  border-bottom: solid 1px #ddc;
 	}
 p
 	{
@@ -96,11 +116,25 @@ a
 
 img[alt="thumbnail"]
 	{
-	width: 5rem;
-	margin-right: 1rem;
-	border-radius: 0.8vw;
+	width: 4em;
+	margin-right: 0.5em;
+	border-radius: 20px;
 	border:solid 1px #a0a0a0;
 	}
+
+img#author
+  {
+  width: 4em;
+  margin: 0 1em 0;
+  border-radius: 20px;
+  border:solid 1px #a0a0a0;
+  }
+
+#index{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+}
 
 /* ******************************************************************************************** */
 
@@ -323,10 +357,12 @@ label[class="tab_item"]
 }
 
 .article{
-	width: 60vw;
+	width: 50vw;
 	padding: 3rem 0 6rem;
-	margin: 1rem auto 1rem;
-	background:#f4f1eb;
+	/*margin: 1rem auto 1rem;*/
+  margin: 1rem 1rem 1rem;
+	/*background:#f4f1eb;*/
+  background: #f6f6ec;
 	box-sizing:border-box;
 	border-radius: 4rem;
 }
