@@ -38,97 +38,78 @@ body
     display: flex;
     margin: 20px auto;
     justify-content: center;
-    /*background: #f6f6ec;*/
-    background: #eeeee4;
-    border-radius: 4rem;
-
-  }
-
-  #rightmenu{
-    width: 25vw;
-    float:right;
-    background: #e6e6dc;
+    background: #e9e8e8;
+    border-radius: 4rem 0rem 0rem 4rem;
   }
 
 
-h1, h2, h3, h4, h5, h6, p
-	{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
 	padding: 0;
 	font-weight: normal;
 	line-height: 1.5;
 	margin-left: 2rem;
 	margin-right: 2rem;
 	}
-h1	
-	{
+h1	{
 	}
-h2
-	{
+h2{
 	color: #643;
 	font-weight:bold;
 	font-size: calc(1rem + 1vw);
   padding-bottom: 0.3em;
   padding-left: 0.4em;
-  border-bottom: solid 1px #ddc;
+  border-bottom: solid 1px #e9e8e8;
 	}
-p
-	{
+p{
 	color: #643;
 	font-size: calc(0.5rem + 0.5vw);
 	font-family: 'Kosugi Maru', sans-serif;
 	margin-left: calc(2.5rem + 0.5vw);
 	}
-h3
-	{
-	color: #a22;
+h3{
+	color: #9c3b3b;
 	font-size: calc(16px + 0.5vmax);
 	padding-left: 1vmax;
-	border-left: solid 5px #a22;
-	border-bottom: solid 1px #a22;
+	border-left: solid 5px #9c3b3b;
+	border-bottom: solid 1px #9c3b3b;
 	}
-h4
-	{
+h4{
 	font-size: calc(0.5rem + 0.5vmax);
 	}
-h5
-	{
+h5{
 	}
-h6
-	{
+h6{
 	}
 
-a
-	{
+a{
 	font-family: 'Sawarabi Gothic', sans-serif;
 	}
 	
-	a:link, a:visited
-		{
+	a:link,
+  a:visited{
 		text-decoration: underline;
 		color: #885;
 		}
 		
-	a:hover, a:active, a:focus
-		{
+	a:hover,
+  a:active,
+  a:focus{
 		text-decoration: underline;
-		color: #a22;
+		color: #9c3b3b;
 		}
 
-img[alt="thumbnail"]
-	{
+.article img{
 	width: 4em;
 	margin-right: 0.5em;
 	border-radius: 20px;
 	border:solid 1px #a0a0a0;
 	}
-
-img#author
-  {
-  width: 4em;
-  margin: 0 1em 0;
-  border-radius: 20px;
-  border:solid 1px #a0a0a0;
-  }
 
 #index{
   position: -webkit-sticky;
@@ -138,8 +119,9 @@ img#author
 
 /* ******************************************************************************************** */
 
-#HEADER, .partition, #FOOTER
-	{
+#HEADER,
+.partition,
+#FOOTER{
 	width: 100%;
 	height: 5vmax;
 	margin: 0;
@@ -151,173 +133,28 @@ img#author
 
 /* ******************************************************************************************** */
 
-#HEADER
-	{
+#HEADER{
 	position: absolute;
 	top: 0;
 	}
-	#TITLEpic
-		{
-		min-width: 30%;
-		height: 50%;
-		position: absolute;
-		left: 10%;
-		transform: translateX(-50%);		
-		top: 50%;
-		transform: translateY(-50%);		
-		background: url("../img/title.png") no-repeat; 
-		background-size: contain;
-		}
 
 /* ******************************************************************************************** */
-
-.contents
-	{
-	margin: 0 auto;
-	display: flex;
-	}
-.text
-	{
-	background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
-	position: relative;
-	box-sizing: border-box;
-	box-shadow: 0 5px 5px #aaa;
-	}
-
-.contentsmenu
-	{
-	height: 30vh;
-	width: 10%;
-	display: flex;
-	flex-direction: column;
-	align-content: space-between;
-	}
-
-input[name="tab_item"], .tab_content
-	{
-	display: none;
-	}
-
-/*
-
-#about:checked ~ #about_content,
-#ghost:checked ~ #ghost_content,
-#balloon:checked ~ #balloon_content
-	{
-	display: block;
-	animation: show 0.5s linear 0s;
-	}
-
-#about:checked ~ label[for="about"],
-#ghost:checked ~ label[for="ghost"],
-#balloon:checked ~ label[for="balloon"]
-	{
-	background-color: #f4f1eb;
-	color: #424242;
-	cursor: default;
-	}
-*/
-
-label[class="tab_item"]
-	{
-	width: 100%;
-	height: 5vh;
-	line-height: 5vh;
-	text-align: center;
-	font-size: 60%;
-	margin: 10px 0;
-	background-color: #919187;
-	color: #fcfcfc;
-	transition-property: color, background-color;
-	transition-duration: 0.2s;
-	transition-timing-function: ease;
-	cursor: pointer;
-	border-radius: 0 0.8vh 0.8vh 0;
-	box-shadow: 0 2px 2px #aaa;
-	}
-
-label[class="tab_item"]:hover
-	{
-	background-color: #f4f1eb;
-	color: #424242;
-	}
-
-@media screen and (max-width:480px)/*小*/
-	{
-	h1, h2, h3, h4, h5, h6, p
-		{
-		line-height: 1.4;
-		}
-	h1	
-		{
-		}
-	h2
-		{
-		font-size: 18px;
-		}
-	p
-		{
-		font-size: 11px;
-		margin-left: 11px;
-		}
-	h3
-		{
-		font-size: 16px;
-		padding-left: 8px;
-		}
-	h4
-		{
-		font-size: 12px;
-		}
-	h5
-		{
-		}
-	h6
-		{
-		}
-label[class="tab_item"]
-		{
-		font-size: 6px;		
-		}
-
-	.contents
-		{
-		width: 90vw;/*.textとlabelのwidthの和*/
-		min-height: 90vh;/*.textのmin-height*/
-		margin: 0 auto;
-		}
-	.text
-		{
-		width: 80vw;
-		min-height: 90vh;
-		padding: 2% 5% 8% 5%;
-		background-size: auto 70vmin;
-		}
-	.contentsmenu
-		{
-		width: 10vw;
-		}
-	.pconly
-		{
-		display: none;
-		}
-	}
-
-@media screen and (min-width:481px)/*大*/
-	{		
-	.contents
-		{
+	.contents{
+    margin: 0 auto;
+    display: flex;
 		width: calc(50vw + calc(5vh / 3 * 6));/*.textとlabelのwidthの和*/
 		min-height: 90vh;/*.textのmin-height*/
 		}
-	.text
-		{
+	.text{
+    background: #f4f1eb url("../img/lav.png") no-repeat right bottom;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px #aaa;
 		width: 45vw;
 		min-height: 90vh;
 		padding: 2% 8% 8% 5%;
 		background-size: auto 25vmax;
 		}
-	}
 
 /* ******************************************************************************************** */
 
@@ -333,7 +170,7 @@ label[class="tab_item"]
 	}
 
 .history{
-	background: #e6e6dc;
+	background: #e0e0df;
 	box-sizing:border-box;
 	padding: 1rem;
 	margin: 2rem 3rem 0;
@@ -343,6 +180,7 @@ label[class="tab_item"]
 .history h2
 	{
 	font-size: 0.8rem;
+  border-bottom: solid 1px #d0d0cf;
 	}
 
 .history p
@@ -353,16 +191,59 @@ label[class="tab_item"]
 .border{
 	margin:4rem 8rem;
 	border-top:dashed;
-	border-color: #a22;
+	border-color: #9c3b3b;
 }
 
 .article{
 	width: 50vw;
 	padding: 3rem 0 6rem;
 	/*margin: 1rem auto 1rem;*/
-  margin: 1rem 1rem 1rem;
+  margin: 5rem;
 	/*background:#f4f1eb;*/
   background: #f6f6ec;
 	box-sizing:border-box;
-	border-radius: 4rem;
+  border-radius: 50px;
+  background: #e9e8e8;
+  box-shadow:  20px 20px 60px #c6c5c5,
+               -20px -20px 60px #ffffff;
 }
+
+#rightmenu{
+  width: 25vw;
+  background-color: #424242;		
+}
+
+#rightmenu h2,
+#rightmenu p,
+#rightmenu h3{
+  color: #d6d6d6;
+}
+
+#rightmenu h2{
+  border-bottom: solid 1px #c0c0b8;
+}
+
+#rightmenu h3{
+  border-left: solid 5px #c0c0b8;
+  border-bottom: solid 1px #c0c0b8;
+}
+
+#rightmenu a:link,
+#rightmenu a:visited{
+  text-decoration: underline;
+  color: #9fa282;
+  }
+  
+#rightmenu a:hover,
+#rightmenu a:active,
+#rightmenu a:focus{
+  text-decoration: underline;
+  color: #a55;
+  }
+
+#rightmenu img{
+  width: 4em;
+  margin-right: 0.5em;
+  border:solid 1px #c0c0b8;
+  border-radius: 10px;
+  }
